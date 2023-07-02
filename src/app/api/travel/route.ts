@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { callChatGPTClient } from '@/backend/openAPIClient';
 import { HttpStatusCodes } from '@/app/backend/response';
 
-let limit = 5;
+let limit = 15;
 
 const GET = async (req: NextRequest) => {
 	const promptText = req?.nextUrl?.searchParams?.get?.('promptText') ?? '';
