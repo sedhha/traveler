@@ -5,6 +5,7 @@ import { MdClose } from 'react-icons/md';
 import Logo from './Logo';
 import { usePathname, useRouter } from 'next/navigation';
 
+// Rest
 const Redirector = ({ children, href }: { children: string; href: string }) => {
 	const { setMenu } = useStore();
 	const router = useRouter();
