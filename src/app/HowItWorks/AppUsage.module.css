@@ -1,0 +1,64 @@
+.Container {
+	padding: 2vh 2vw;
+}
+
+.WhatsInHeader {
+	cursor: pointer;
+	font-size: 3vh;
+	text-align: center;
+	font-weight: 900;
+	color: var(--light-gray);
+}
+
+.Illustrations {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2vh;
+	align-items: center;
+}
+
+.ImageContainer {
+    height: 33vh;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.IllustrationImage {
+	border-radius: 50%;
+	background-color: #f4f4f4;
+	margin-top: 2vh;
+    object-fit: contain;
+    object-position: center;
+}
+
+.Stages {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    column-gap: 2.2vw;
+    margin-top: 3vh;
+}
+
+.Stage {
+	height: 1.2vh;
+	aspect-ratio: 1;
+    border-radius: 50%;
+	background-color: var(--light-gray);
+}
+
+.Active {
+    background-color: var(--theme-light-blue);
+}
+
+.Title {
+    font-size: medium;
+    color: var(--theme-light-blue);
+}
+
+.Description {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dark-gray);
+    font-size: 1.8vh;
+    text-align: center;
+}

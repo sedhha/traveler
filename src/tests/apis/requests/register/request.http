@@ -1,0 +1,10 @@
+@BASE_URL=http://localhost:3000
+POST {{BASE_URL}}/api/register
+Content-Type: application/json
+
+{
+    "name":"Test-Name",
+    "emailAddress":"test@example.com",
+    "password": "password",
+    "reEnterPassword": "reEnterPassword"
+}

@@ -20,7 +20,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/root/*": ["./src/app/*"],
+      "@/common/*": ["./src/app/common/*"],
+      "@/backend/*": ["./src/app/backend/*"],
+      "@/frontend/*": ["./src/app/frontend/*"],
+      "@/be-interfaces/*": ["./src/app/backend/interfaces/*"],
+
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

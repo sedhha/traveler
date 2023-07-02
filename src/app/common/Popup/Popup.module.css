@@ -1,0 +1,66 @@
+.Popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    height: clamp(100vh, 100vh, 100vh);
+    width: clamp(100vw,100vw, 100vw);
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.AlertBanner {
+    background-color: white;
+    padding: 2vh 2vw;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 80%;
+}
+
+.AlertBannerInfo {
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    align-items: center;
+}
+
+.CloseItem {
+    text-align: end;
+    width: 100%;
+}
+
+.CloseIcon {
+    color: red;
+    font-size: x-large;
+}
+
+.BigIcon {
+    font-size: 10vh;
+    margin: 0 auto;
+}
+
+.Title {
+    font-weight: 500;
+    font-size: x-large;
+    text-align: center;
+}
+
+.ErrorClass {
+    color: red;
+}
+
+.NeutralClass {
+    color: black;
+}
+
+.SuccessClass {
+    color: limegreen;
+}
+
+.Message {
+    color: var(--light-gray-01);
+}

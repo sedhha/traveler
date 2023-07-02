@@ -1,0 +1,123 @@
+.Container {
+	padding: 3vh 3vw;
+	max-width: 100%;
+}
+
+.Container > :not(:first-child) {
+	margin-top: 2.5vh;
+}
+
+.Row {
+	display: flex;
+	align-items: center;
+	column-gap: 4vw;
+}
+
+.FullWidthRow {
+	display: flex;
+	align-items: center;
+	column-gap: 0.1rem;
+	width: 100%;
+}
+.NumberRow {
+	display: flex;
+	align-items: center;
+	column-gap: 2vw;
+	width: 100%;
+}
+
+.FullWidthRow > button {
+	flex: 1;
+	border: none;
+	outline: none;
+	color: #fff;
+	padding: 2vh 1.5vw;
+	cursor: pointer;
+	transition: 0.3s ease-in all;
+	background-color: var(--theme-light-blue);
+	font-size: 2vh;
+}
+
+.FullWidthRow > button:hover {
+	background-color: var(--theme-dark-blue);
+}
+
+.FullWidthRow > button.active {
+	background-color: var(--theme-dark-blue);
+}
+
+.FullWidthRow > button:nth-child(odd) {
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+.FullWidthRow > button:nth-child(even) {
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+
+.Icon {
+	color: var(--theme-light-blue);
+	font-size: 5vh;
+	border-radius: 50%;
+	background-color: var(--theme-dark-blue);
+}
+
+.FormData {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2vh;
+}
+
+.FormFieldWithLabel {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 3vw;
+	font-weight: 400;
+	font-size: 2vh;
+	color: var(--light-gray-01);
+}
+
+.InputField,
+.CountryCodeField {
+	padding: 1vh 1vw;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #ccc;
+	flex: auto;
+}
+
+.CountryCodeField {
+	max-width: 6vw;
+}
+
+.CountryCodeField::-webkit-inner-spin-button,
+.InputField::-webkit-inner-spin-button,
+.InputField::-webkit-outer-spin-button,
+.CountryCodeField::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+.NumberFieldPlaceholder {
+	font-size: small;
+	color: var(--light-gray-01);
+	text-align: end;
+}
+.InputField:focus,
+.CountryCodeField:focus {
+	border-bottom: 1px solid var(--theme-dark-blue);
+}
+
+.FormIcon {
+	font-size: 3vh;
+	border-radius: 50%;
+}
+
+
+.GenericMessage {
+	font-size: medium;
+	color: var(--light-gray-01);
+}
