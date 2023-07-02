@@ -9,10 +9,10 @@ const getResponseFromCache = async (key: string): Promise<string | void> =>
 		.eq(tables.cache.columns.key, key)
 		.then(({ data, error }) => {
 			if (error || !data.length) return;
-			return data[0] as string;
+			return (data[0] as unknown as { value: string }).value;
 		});
 
-const callChatGPTClient = async (promptMessage: string) => {
+const callChatGPTClient = async (promptMessage: string): Promise<unknown[]> => {
 	// Taking at max 50 characters
 	promptMessage = (promptMessage ?? '').slice(0, 50).toLowerCase();
 	const cachedResponse = await getResponseFromCache(promptMessage);
@@ -39,8 +39,15 @@ const callChatGPTClient = async (promptMessage: string) => {
 					},
 				}
 			)
-			.then(({ data }) => {
+			.then(async ({ data }) => {
 				try {
+					await admin.from(tables.cache.name).insert([
+						{
+							[tables.cache.columns.key]: promptMessage,
+							[tables.cache.columns.value]: data?.choices?.[0]?.text ?? '[]',
+						},
+					]);
+
 					return JSON.parse(data?.choices?.[0]?.text ?? '[]');
 				} catch (err) {
 					console.error(
@@ -57,7 +64,7 @@ const callChatGPTClient = async (promptMessage: string) => {
 				);
 				return [];
 			});
-	else if (cachedResponse) {
+	else if (cachedResponse != undefined) {
 		try {
 			return JSON.parse(cachedResponse);
 		} catch (err) {
@@ -68,4 +75,6 @@ const callChatGPTClient = async (promptMessage: string) => {
 			return [];
 		}
 	}
+	return [];
 };
+export { callChatGPTClient };

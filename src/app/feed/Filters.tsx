@@ -12,6 +12,7 @@ type Props = {
 	onApply: () => void;
 	updateCustomPrompt: (value: string) => void;
 	setLocation: (value: string) => void;
+	onCustomPrompRequest: () => void;
 };
 
 const FilterBox = ({
@@ -23,6 +24,7 @@ const FilterBox = ({
 	setStartDate,
 	setEndDate,
 	updateCustomPrompt,
+	onCustomPrompRequest,
 	onUnApply,
 	onApply,
 }: Props) => (
@@ -95,11 +97,16 @@ const FilterBox = ({
 			Apply Filters
 		</button>
 		<button
-			id='filterBtn'
 			className={[classes['btn-secondary'], classes.button].join(' ')}
 			onClick={onUnApply}
 		>
 			Clear Filters
+		</button>
+		<button
+			className={[classes['btn-secondary'], classes.button].join(' ')}
+			onClick={onCustomPrompRequest}
+		>
+			Get Custom Trips
 		</button>
 	</div>
 );
