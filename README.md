@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tour Buddy - Tourist Matchmaking Web Application
 
-## Getting Started
+Tour Buddy is a web application designed to connect like-minded travelers and facilitate travel companionship. It aims to address the common problem of solo travelers seeking companionship and wanting to explore new destinations with compatible individuals. By matching tourists based on their preferences and interests, Tour Buddy offers a compelling solution for both friends and businesses in the travel industry.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- User Registration and Authentication: Users can sign up and create an account to access the platform. They can log in securely to manage their profile and preferences.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Profile Creation: Users can create a detailed profile by providing information such as their name, age, gender, interests, preferred travel destinations, and travel dates.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Matching Algorithm: Tour Buddy employs an intelligent matching algorithm that considers user preferences, interests, and travel details to suggest compatible travel companions. The algorithm takes into account factors like destination, travel dates, and shared interests to provide the best possible matches.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Communication: Once users are matched, they can initiate communication through an in-app messaging system. This allows them to get to know each other, plan their itinerary, and discuss travel arrangements.
 
-## Learn More
+- Privacy and Security: Tour Buddy ensures user privacy by implementing robust security measures. User data is protected, and personal information is only shared with matched travel companions.
 
-To learn more about Next.js, take a look at the following resources:
+- Reviews and Ratings: After completing their journey, users can rate and provide feedback on their travel companions. This feature helps build a reliable community and allows future users to make informed decisions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Tour Buddy is built using the T3 Stack, which is the standard at Mercor. It leverages the following technologies:
 
-## Deploy on Vercel
+- Frontend: Next.js, TypeScript
+- Backend: Node.js, Express, TypeScript
+- Database: Supabase
+- Authentication: Pending
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Tour Buddy can be easily deployed using Vercel or any other preferred hosting provider. The deployment process is streamlined to ensure smooth integration with the chosen platform.
+
+## How to Run Locally
+
+To run Tour Buddy locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/sedhha/traveler`
+2. Install dependencies: `cd traveler` then `npm install`
+3. Set up environment variables by creating a `.env` file and configuring the required values.
+4. Start the development server: `npm run dev`
+5. Access the application locally at `http://localhost:3000`
+
+## Contributions
+
+We welcome contributions to Tour Buddy! If you would like to contribute, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add your commit message"`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Submit a pull request.
+
+Please ensure that your code follows the established coding standards and includes appropriate tests.
+
+## License
+
+Tour Buddy is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## About
+
+Tour Buddy was developed as part of a hackathon project. It aims to revolutionize the way solo travelers find travel companions and enhance their overall travel experience. This project was executed with product intuition and excellent technical execution, following industry-standard tech stacks.
+
+For any inquiries or feedback, please contact our team at [contact@tourbuddy.com](mailto:contact@tourbuddy.com).
+
+Happy traveling with Tour Buddy!
