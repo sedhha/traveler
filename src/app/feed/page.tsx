@@ -1,22 +1,59 @@
+'use client';
 import dummyPosts from '@/constants/dummy-posts.json';
+import { FilterBox } from '@/app/feed/Filters';
 import classes from './Feed.module.css';
+import { useState } from 'react';
+import { FiFilter } from 'react-icons/fi';
+import { FaFilter } from 'react-icons/fa';
+import { TripCard } from './TripCard';
 const Feed = () => {
+	const [showFilter, setShowFilter] = useState(false);
+	const [applied, setApplied] = useState(false);
+	const onApply = () => {
+		setApplied(true);
+		setShowFilter(false);
+	};
+	const onUnApply = () => setApplied(false);
+
+	const toggleFilter = () => {
+		setShowFilter((prev) => !prev);
+	};
 	return (
-		<div>
-			Hello Feed
-			<div>
+		<>
+			<div className={classes.Filter}>
+				{applied ? (
+					<FaFilter
+						className={classes.FilterIcon}
+						onClick={toggleFilter}
+					/>
+				) : (
+					<FiFilter
+						className={classes.FilterIcon}
+						onClick={toggleFilter}
+					/>
+				)}
+			</div>
+			{showFilter && (
+				<FilterBox
+					apply={applied}
+					onApply={onApply}
+					onUnApply={onUnApply}
+				/>
+			)}
+			<div className={classes.TravelPosts}>
 				{dummyPosts.map((post) => (
-					<div key={post.tripId}>
-						<h1>{post.tripName}</h1>
-						<h2>
-							Starting At: {new Date(post.startDate).toLocaleDateString()}
-						</h2>
-						<h2>Ending At: {new Date(post.endDate).toLocaleDateString()}</h2>
-						<h3>{post.description}</h3>
-					</div>
+					<TripCard
+						key={post.tripId}
+						title={post.tripName}
+						startDate={post.startDate}
+						endDate={post.endDate}
+						description={post.description}
+						city={post.city}
+						country={post.country}
+					/>
 				))}
 			</div>
-		</div>
+		</>
 	);
 };
 export default Feed;
