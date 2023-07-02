@@ -34,7 +34,7 @@ const MobileMenu = () => {
 			</div>
 			<div className={classes.MenuItem}>
 				<Redirector href='/'>Home</Redirector>
-				<Redirector href='/bagpackers'>Discover Bagpackers</Redirector>
+				<Redirector href='/feed'>Discover Bagpackers</Redirector>
 				<Redirector href='/locals'>Discover Locals</Redirector>
 				<Redirector href='/about'>About</Redirector>
 				<Redirector href='/login'>Sign Up</Redirector>
