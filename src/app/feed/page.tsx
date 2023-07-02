@@ -1,4 +1,5 @@
 import dummyPosts from '@/constants/dummy-posts.json';
+import classes from './Feed.module.css';
 const Feed = () => {
 	return (
 		<div>
