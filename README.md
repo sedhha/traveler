@@ -1,5 +1,5 @@
 # Tour Buddy - Tourist Matchmaking Web Application
-## Track - Full Stack
+## Track - Full Stack / AI
 
 Tour Buddy is a web application designed to connect like-minded travelers and facilitate travel companionship. It aims to address the common problem of solo travelers seeking companionship and wanting to explore new destinations with compatible individuals. By matching tourists based on their preferences and interests, Tour Buddy offers a compelling solution for both friends and businesses in the travel industry.
 
