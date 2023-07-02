@@ -1,4 +1,4 @@
-# Tour Buddy - Tourist Matchmaking Web Application
+# Bagpacker - Tourist Matchmaking Web Application
 ## Track - Full Stack / AI
 
 Tour Buddy is a web application designed to connect like-minded travelers and facilitate travel companionship. It aims to address the common problem of solo travelers seeking companionship and wanting to explore new destinations with compatible individuals. By matching tourists based on their preferences and interests, Tour Buddy offers a compelling solution for both friends and businesses in the travel industry.
@@ -22,8 +22,8 @@ Tour Buddy is a web application designed to connect like-minded travelers and fa
 Tour Buddy is built using the T3 Stack, which is the standard at Mercor. It leverages the following technologies:
 
 - Frontend: Next.js, TypeScript, Chakra UI
-- Backend: Node.js, Express, TypeScript
-- Database: MongoDB
+- Backend: Node.js, Express, TypeScript, Open AI APIs
+- Database: Supabase
 - Authentication: JWT (JSON Web Tokens)
 
 ## Deployment
@@ -34,32 +34,20 @@ Tour Buddy can be easily deployed using Vercel or any other preferred hosting pr
 
 To run Tour Buddy locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/tour-buddy.git`
-2. Install dependencies: `cd tour-buddy` then `npm install`
+1. Clone the repository: `git clone https://github.com/sedhha/traveler`
+2. Install dependencies: `cd traveler` then `npm install`
 3. Set up environment variables by creating a `.env` file and configuring the required values.
 4. Start the development server: `npm run dev`
 5. Access the application locally at `http://localhost:3000`
 
-## Contributions
-
-We welcome contributions to Tour Buddy! If you would like to contribute, please follow these guidelines:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m "Add your commit message"`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Submit a pull request.
-
-Please ensure that your code follows the established coding standards and includes appropriate tests.
-
 ## License
 
-Tour Buddy is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Bagpacker is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## About
 
-Tour Buddy was developed as part of a hackathon project. It aims to revolutionize the way solo travelers find travel companions and enhance their overall travel experience. This project was executed with product intuition and excellent technical execution, following industry-standard tech stacks.
+Bagpacker was developed as part of a hackathon project. It aims to revolutionize the way solo travelers find travel companions and enhance their overall travel experience. This project was executed with product intuition and excellent technical execution, following industry-standard tech stacks.
 
-For any inquiries or feedback, please contact our team at [contact@tourbuddy.com](mailto:contact@tourbuddy.com).
+For any inquiries or feedback, please contact our team at [bagpacker](mailto:activity.schoolsh2@gmail.com).
 
-Happy traveling with Tour Buddy!
+Happy traveling with Bagpacker!
